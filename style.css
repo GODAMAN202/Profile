@@ -1,0 +1,132 @@
+/* style.css */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f9f9f9;
+  --shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+body.dark {
+  --bg-color: #1a1a2e;
+  --text-color: #e0e0e0;
+  --card-bg: #16213e;
+  --shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+#toggleTheme {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+#toggleTheme:hover {
+  transform: scale(1.05);
+}
+
+.profile-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.profile-header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  margin-bottom: 1rem;
+}
+
+.profile-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.tagline {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.profile-body {
+  padding: 2rem;
+}
+
+.profile-body h2 {
+  margin-bottom: 0.8rem;
+  color: #ee5a24;
+  border-bottom: 2px solid #ee5a24;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+section {
+  margin-bottom: 1.8rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+.passion ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.passion li {
+  background: rgba(238, 90, 36, 0.1);
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.contact p {
+  margin: 0.5rem 0;
+}
